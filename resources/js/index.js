@@ -120,7 +120,11 @@ function filterTaste2(selectedInput) {
 }
 
 function filterOrganic(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
+  let value;
+  if (selectedInput == 'LÍFRÆN VÍN') {
+    value = 'TRUE'
+  }
+  
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
   if (value == 'ÖLL VÍN') {
