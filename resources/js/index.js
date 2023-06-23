@@ -123,6 +123,8 @@ function filterOrganic(selectedInput) {
   let value;
   if (selectedInput == 'LÍFRÆN VÍN') {
     value = 'TRUE'
+  } else {
+    value = ''
   }
 
   console.log(value);
