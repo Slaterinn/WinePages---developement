@@ -149,10 +149,8 @@ function filterOrganic(selectedInput) {
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
   if (value == 'ÖLL VÍN') {
-    console.log('Öll vín valin, set is_organic = false')
     filter.is_organic = 'false';
   } else {
-    console.log('Öll vín valin, set is_organic = true')
     filter.is_organic = 'true';  
   }
 
