@@ -216,7 +216,7 @@ filterData = (data, query) => {
     }
 
     for (let key in query) {
-        console.log((item[key]).toUpperCase() + ' - ' + query[key])
+        console.log(item[key] + ' - ' + query[key])
         if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] ) {
           return false;
         }
