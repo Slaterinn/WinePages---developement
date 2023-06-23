@@ -124,13 +124,13 @@ function filterOrganic(selectedInput) {
   if (selectedInput == 'LÍFRÆN VÍN') {
     value = 'TRUE'
   }
-  
+
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
   if (value == 'ÖLL VÍN') {
     filter.is_organic = '';
   } else {
-    filter.is_organic = 'true';  
+    filter.is_organic = value;  
   }
 
   query = buildFilter(filter);
