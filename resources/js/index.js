@@ -167,7 +167,7 @@ function filterFood(selectedInput) {
 
   query = buildFilter(filter);
   //filter data:
-  result = filterData(data, query);
+  result = filterDataFoodPairing(data, query);
 
   appendData(result);
   typeColor();
@@ -218,6 +218,20 @@ filterData = (data, query) => {
     for (let key in query) {
         console.log(item[key] + ' - ' + query[key])
         if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] ) {
+          return false;
+        }
+    }
+      return true;
+  });
+  return filteredData;
+}
+
+
+filterDataFoodPairing = (data, query) => {
+  const filteredData = data.filter( (item) => {
+    for (let key in query) {
+        console.log(item[key] + ' - ' + query[key])
+        if (item[key] === undefined || item[key] === null || !query[key].includes(item[key].toUpperCase()) || parseInt(item['price']) > filter['price'] ) {
           return false;
         }
     }
