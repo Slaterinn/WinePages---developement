@@ -148,7 +148,7 @@ function filterOrganic(selectedInput) {
   var value = selectedInput.value.toUpperCase();
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ALLT VALIÐ') {
+  if (value == 'ÖLL VÍN) {
     filter.organic = false;
   } else {
     filter.organic = true;  
