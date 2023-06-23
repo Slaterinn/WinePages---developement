@@ -231,7 +231,7 @@ filterDataFoodPairing = (data, query) => {
   const filteredData = data.filter( (item) => {
     for (let key in query) {
         //console.log(item[key] + ' - ' + query[key])
-        if (item[key] === undefined || item[key] === null || item[key] = '' ||!query[key].includes(item[key].toUpperCase()) || parseInt(item['price']) > filter['price'] ) {
+        if (item[key] === undefined || item[key] === null || item[key] === '' || !query[key].includes(item[key].toUpperCase()) || parseInt(item['price']) > filter['price'] ) {
           return false;
         }
     }
