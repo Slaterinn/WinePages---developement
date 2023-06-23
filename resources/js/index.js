@@ -148,6 +148,7 @@ function filterOrganic(selectedInput) {
 
 function filterFood(selectedInput) {
   var value = selectedInput.value.toUpperCase();
+  console.log(value);
   if (value == 'NAUTAKJÖT') {
     value = 'E'
   } else if (value == 'GRILLMATUR') {
@@ -158,10 +159,10 @@ function filterFood(selectedInput) {
 
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ÖLL VÍN') {
-    filter.is_organic = '';
+  if (value == 'ALLT VALIÐ') {
+    filter.food = '';
   } else {
-    filter.is_organic = value;  
+    filter.food = value;  
   }
 
   query = buildFilter(filter);
