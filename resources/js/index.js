@@ -33,7 +33,8 @@ let filter = {
   category: '',
   sweetness: '',
   boldness: '',
-  price: 1000000
+  price: 1000000,
+  organic: false
 }
 
 
@@ -141,6 +142,26 @@ function filterPrice(selectedInput) {
   appendData(result);
   typeColor();
 }
+
+
+function filterOrganic(selectedInput) {
+  var value = selectedInput.value.toUpperCase();
+  console.log(value);
+  //Tek input frá filter og tæmi filter ef það er allt valið:
+  if (value == 'ALLT VALIÐ') {
+    filter.boldness = false;
+  } else {
+    filter.boldness = true;  
+  }
+
+  query = buildFilter(filter);
+  //filter data:
+  result = filterData(data, query);
+
+  appendData(result);
+  typeColor();
+}
+
 
 
 buildFilter = (filter) => {
