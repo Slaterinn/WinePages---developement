@@ -178,6 +178,8 @@ filterData = (data, query) => {
   const filteredData = data.filter( (item) => {
     if(parseInt(item['price']) > filter['price']){
       return false;
+    } else if(item['organic'] !== filter['organic']) {
+      return false;
     }
     for (let key in query) {
         if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] ) {
