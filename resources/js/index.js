@@ -34,7 +34,8 @@ let filter = {
   sweetness: '',
   boldness: '',
   price: 1000000,
-  is_organic: ''
+  is_organic: '',
+  food: ''
 }
 
 
@@ -119,9 +120,10 @@ function filterTaste2(selectedInput) {
   typeColor();
 }
 
+
 function filterOrganic(selectedInput) {
   var value = selectedInput.value.toUpperCase();
-  if (value.toUpperCase() == 'LÍFRÆN VÍN') {
+  if (value == 'LÍFRÆN VÍN') {
     value = 'TRUE'
   } else {
     value = ''
@@ -142,6 +144,34 @@ function filterOrganic(selectedInput) {
   appendData(result);
   typeColor();
 }
+
+
+function filterFood(selectedInput) {
+  var value = selectedInput.value.toUpperCase();
+  if (value == 'NAUTAKJÖT') {
+    value = 'E'
+  } else if (value == 'GRILLMATUR') {
+    value = 'J'
+  } else {
+    value = ''
+  }
+
+  console.log(value);
+  //Tek input frá filter og tæmi filter ef það er allt valið:
+  if (value == 'ÖLL VÍN') {
+    filter.is_organic = '';
+  } else {
+    filter.is_organic = value;  
+  }
+
+  query = buildFilter(filter);
+  //filter data:
+  result = filterData(data, query);
+
+  appendData(result);
+  typeColor();
+}
+
 
 function filterPrice(selectedInput) {
   var value = selectedInput.value.toUpperCase();
