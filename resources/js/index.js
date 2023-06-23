@@ -167,7 +167,7 @@ function filterFood(selectedInput) {
 
   query = buildFilter(filter);
   //filter data:
-  result = filterDataFoodPairing(data, query);
+  result = filterData(data, query);
 
   appendData(result);
   typeColor();
@@ -216,7 +216,7 @@ filterData = (data, query) => {
     }
 
     for (let key in query) {
-        console.log(item['food_pairing'] + ' - ' + query'food_pairing')
+        console.log(item['food_pairing'] + ' - ' + query['food_pairing'])
         if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] || !item['food_pairing'].includes(query['food_pairing']) ) {
           return false;
         }
@@ -227,18 +227,6 @@ filterData = (data, query) => {
 }
 
 
-filterDataFoodPairing = (data, query) => {
-  const filteredData = data.filter( (item) => {
-    for (let key in query) {
-        //console.log(item[key] + ' - ' + query[key])
-        if (item[key] === undefined || item[key] === null  || !query[key].includes(item[key].toUpperCase()) || parseInt(item['price']) > filter['price'] ) {
-          return false;
-        }
-    }
-      return true;
-  });
-  return filteredData;
-}
 
 //query[key] !== (item[key].toUpperCase())
 
