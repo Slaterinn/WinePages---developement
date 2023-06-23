@@ -149,9 +149,9 @@ function filterOrganic(selectedInput) {
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
   if (value == 'ALLT VALIÐ') {
-    filter.boldness = false;
+    filter.organic = false;
   } else {
-    filter.boldness = true;  
+    filter.organic = true;  
   }
 
   query = buildFilter(filter);
