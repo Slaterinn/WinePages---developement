@@ -35,7 +35,7 @@ let filter = {
   boldness: '',
   price: 1000000,
   is_organic: '',
-  food: ''
+  food_pairing: ''
 }
 
 
@@ -160,9 +160,9 @@ function filterFood(selectedInput) {
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
   if (value == 'ALLT VALIÐ') {
-    filter.food = '';
+    filter.food_pairing = '';
   } else {
-    filter.food = value;  
+    filter.food_pairing = value;  
   }
 
   query = buildFilter(filter);
