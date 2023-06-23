@@ -34,7 +34,7 @@ let filter = {
   sweetness: '',
   boldness: '',
   price: 1000000,
-  organic: 'false'
+  is_organic: 'false'
 }
 
 
@@ -149,11 +149,11 @@ function filterOrganic(selectedInput) {
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
   if (value == 'ÖLL VÍN') {
-    console.log('Öll vín valin, set organic = false')
-    filter.organic = 'false';
+    console.log('Öll vín valin, set is_organic = false')
+    filter.is_organic = 'false';
   } else {
-    console.log('Öll vín valin, set organic = true')
-    filter.organic = 'true';  
+    console.log('Öll vín valin, set is_organic = true')
+    filter.is_organic = 'true';  
   }
 
   query = buildFilter(filter);
@@ -180,7 +180,7 @@ filterData = (data, query) => {
   const filteredData = data.filter( (item) => {
     if(parseInt(item['price']) > filter['price']){
       return false;
-    } else if(item['organic'] !== filter['organic'] || item['organic'] !== '')  {
+    } else if(item['is_organic'] !== filter['is_organic'] || item['is_organic'] !== '')  {
       return false;
     }
     for (let key in query) {
