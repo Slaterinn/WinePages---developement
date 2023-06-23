@@ -33,7 +33,8 @@ let filter = {
   category: '',
   sweetness: '',
   boldness: '',
-  price: 1000000
+  price: 1000000,
+  is_organic: ''
 }
 
 
@@ -108,6 +109,24 @@ function filterTaste2(selectedInput) {
     filter.boldness = '';
   } else {
     filter.boldness = value;  
+  }
+
+  query = buildFilter(filter);
+  //filter data:
+  result = filterData(data, query);
+
+  appendData(result);
+  typeColor();
+}
+
+function filterOrganic(selectedInput) {
+  var value = selectedInput.value.toUpperCase();
+  console.log(value);
+  //Tek input frá filter og tæmi filter ef það er allt valið:
+  if (value == 'ÖLL VÍN') {
+    filter.is_organic = '';
+  } else {
+    filter.is_organic = 'true';  
   }
 
   query = buildFilter(filter);
