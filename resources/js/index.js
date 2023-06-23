@@ -33,8 +33,7 @@ let filter = {
   category: '',
   sweetness: '',
   boldness: '',
-  price: 1000000,
-  is_organic: 'false'
+  price: 1000000
 }
 
 
@@ -144,26 +143,6 @@ function filterPrice(selectedInput) {
 }
 
 
-function filterOrganic(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
-  console.log(value);
-  //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ÖLL VÍN') {
-    filter.is_organic = 'false';
-  } else {
-    filter.is_organic = 'true';  
-  }
-
-  query = buildFilter(filter);
-  //filter data:
-  result = filterData(data, query);
-
-  appendData(result);
-  typeColor();
-}
-
-
-
 buildFilter = (filter) => {
     let query = {};
     for (let keys in filter) {
@@ -178,7 +157,7 @@ filterData = (data, query) => {
   const filteredData = data.filter( (item) => {
     if(parseInt(item['price']) > filter['price']){
       return false;
-    } 
+    }
     for (let key in query) {
         if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] ) {
           return false;
