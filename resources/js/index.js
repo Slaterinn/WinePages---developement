@@ -216,7 +216,7 @@ filterData = (data, query) => {
     }
 
     for (let key in query) {
-        console.log(item[key] + ' - ' + query[key])
+        //console.log(item[key] + ' - ' + query[key])
         if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] ) {
           return false;
         }
@@ -230,8 +230,8 @@ filterData = (data, query) => {
 filterDataFoodPairing = (data, query) => {
   const filteredData = data.filter( (item) => {
     for (let key in query) {
-        console.log(item[key] + ' - ' + query[key])
-        if (item[key] === undefined || item[key] === null || !query[key].includes(item[key].toUpperCase()) || parseInt(item['price']) > filter['price'] ) {
+        //console.log(item[key] + ' - ' + query[key])
+        if (item[key] === undefined || item[key] === null || item[key] = '' ||!query[key].includes(item[key].toUpperCase()) || parseInt(item['price']) > filter['price'] ) {
           return false;
         }
     }
