@@ -121,7 +121,7 @@ function filterTaste2(selectedInput) {
 
 function filterOrganic(selectedInput) {
   let value;
-  if (selectedInput == 'LÍFRÆN VÍN') {
+  if (selectedInput.toUpperCase() == 'LÍFRÆN VÍN') {
     value = 'TRUE'
   } else {
     value = ''
