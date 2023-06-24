@@ -124,7 +124,7 @@ function filterTaste2(selectedInput) {
 function filterOrganic(selectedInput) {
   var value = selectedInput.value;
   if (value == 'Lífræn vín') {
-    value = 'True'
+    value = 'true'
   } else {
     value = ''
   }
