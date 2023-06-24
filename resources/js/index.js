@@ -66,10 +66,10 @@ function searchFunction() {
 
 
 function filterType(selectedInput) {
-  var value = selectedInput.value.toUpperCase();  
+  var value = selectedInput.value;  
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ALLAR VÍNTEGUNDIR') {
+  if (value == 'Allar víntegundir') {
     filter.category = '';
   } else {
     filter.category = value;  
@@ -85,10 +85,10 @@ function filterType(selectedInput) {
 
 
 function filterTaste(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
+  var value = selectedInput.value;
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ALLT VALIÐ') {
+  if (value == 'Allt valið') {
     filter.sweetness = '';
   } else {
     filter.sweetness = value;  
@@ -103,10 +103,10 @@ function filterTaste(selectedInput) {
 }
 
 function filterTaste2(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
+  var value = selectedInput.value;
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ALLT VALIÐ') {
+  if (value == 'Allt valið') {
     filter.boldness = '';
   } else {
     filter.boldness = value;  
@@ -122,8 +122,8 @@ function filterTaste2(selectedInput) {
 
 
 function filterOrganic(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
-  if (value == 'LÍFRÆN VÍN') {
+  var value = selectedInput.value;
+  if (value == 'Lífræn vín') {
     value = 'TRUE'
   } else {
     value = ''
@@ -131,7 +131,7 @@ function filterOrganic(selectedInput) {
 
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ÖLL VÍN') {
+  if (value == 'Öll vín') {
     filter.is_organic = '';
   } else {
     filter.is_organic = value;  
@@ -147,11 +147,11 @@ function filterOrganic(selectedInput) {
 
 
 function filterFood(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
+  var value = selectedInput.value;
   console.log(value);
-  if (value == 'NAUTAKJÖT') {
+  if (value == 'Nautakjöt') {
     value = 'E'
-  } else if (value == 'GRILLMATUR') {
+  } else if (value == 'Grillmatur') {
     value = 'J'
   } else {
     value = ''
@@ -159,7 +159,7 @@ function filterFood(selectedInput) {
 
   console.log(value);
   //Tek input frá filter og tæmi filter ef það er allt valið:
-  if (value == 'ALLT VALIÐ') {
+  if (value == 'Allt valið') {
     filter.food_pairing = '';
   } else {
     filter.food_pairing = value;  
@@ -175,16 +175,16 @@ function filterFood(selectedInput) {
 
 
 function filterPrice(selectedInput) {
-  var value = selectedInput.value.toUpperCase();
+  var value = selectedInput.value;
   //Tek input frá filter og tæmi filter ef það er allt valið:
 
-  if (value == 'ÖLL VERÐ') {
+  if (value == 'Öll verð') {
     filter.price = 1000000;
-  } else if (value == 'UNDIR 3.000') {
+  } else if (value == 'Undir 3.000') {
     filter.price = 3000;  
-  } else if (value == 'UNDIR 5.000') {
+  } else if (value == 'Undir 5.000') {
     filter.price = 5000;
-  } else if (value == 'UNDIR 10.000') {
+  } else if (value == 'Undir 10.000') {
     filter.price = 10000;
   } else {
     filter.price = 20000
@@ -216,8 +216,8 @@ filterData = (data, query) => {
     }
 
     for (let key in query) {
-        console.log(item['food_pairing'] + ' - ' + query['food_pairing'] + query['food_pairing'].includes(item['food_pairing']) )
-        if (item[key] === undefined || item[key] === null || query[key] !==(item[key]).toUpperCase() || parseInt(item['price']) > filter['price'] || !query['food_pairing'].includes(item['food_pairing']) ) {
+        //console.log(item['food_pairing'] + ' - ' + query['food_pairing'] + query['food_pairing'].includes(item['food_pairing']) )
+        if (item[key] === undefined || item[key] === null || !query[key].includes(item[key]) || parseInt(item['price']) > filter['price'] || !query['food_pairing'].includes(item['food_pairing']) ) {
           return false;
         }
     }
