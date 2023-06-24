@@ -219,7 +219,7 @@ filterData = (data, query) => {
         console.log(item['wine_name']);
         console.log(item[key] + ' - ' + query[key] )
         console.log('passar food pairing? ' + query[key].includes(item[key]))
-        if (item[key] === undefined || item[key] === null || !query[key].includes(item[key]) || parseInt(item['price']) > filter['price'] ) {
+        if (item[key] === undefined || item[key] === null || !item[key].includes(query[key]) || parseInt(item['price']) > filter['price'] ) {
           return false;
         }
     }
