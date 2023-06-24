@@ -55,7 +55,7 @@ function searchFunction() {
     card = cards[i].getElementsByTagName("h3")[0];
     if(card) {
       txtValue = card.innerHTML;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      if (txtValue.indexOf(filter) > -1) {
         cards[i].style.display = ""
       } else {
         cards[i].style.display = "none"
@@ -216,7 +216,7 @@ filterData = (data, query) => {
     }
 
     for (let key in query) {
-        //console.log(item['food_pairing'] + ' - ' + query['food_pairing'] + query['food_pairing'].includes(item['food_pairing']) )
+        console.log(item[key] + ' - ' + query[key] )
         if (item[key] === undefined || item[key] === null || !query[key].includes(item[key]) || parseInt(item['price']) > filter['price'] || !query['food_pairing'].includes(item['food_pairing']) ) {
           return false;
         }
