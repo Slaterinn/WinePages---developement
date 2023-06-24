@@ -217,6 +217,7 @@ filterData = (data, query) => {
 
     for (let key in query) {
         console.log(item[key] + ' - ' + query[key] )
+        conso.log(query[key] === undefined)
         if (item[key] === undefined || item[key] === null || !query[key].includes(item[key]) || parseInt(item['price']) > filter['price'] || !query['food_pairing'].includes(item['food_pairing']) ) {
           return false;
         }
