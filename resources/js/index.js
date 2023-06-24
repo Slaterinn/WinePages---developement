@@ -218,7 +218,6 @@ filterData = (data, query) => {
     for (let key in query) {
         console.log(item['wine_name']);
         console.log(item[key] + ' - ' + query[key] )
-        console.log(query['food_pairing'] + ' - ' + item['food_pairing'])
         console.log('passar food pairing? ' + query[key].includes(item[key]))
         if (item[key] === undefined || item[key] === null || !query[key].includes(item[key]) || parseInt(item['price']) > filter['price'] ) {
           return false;
