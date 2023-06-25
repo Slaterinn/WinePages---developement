@@ -440,7 +440,7 @@ function sortByField(selectedInput){
     console.log(value);
     //Raða json eftir rating
     data = data.sort((a, b) => {
-      if (a.price > b.price) {
+      if (parseInt(a.price) > parseInt(b.price) ) {
         return -1;
       }
     })
@@ -451,7 +451,7 @@ function sortByField(selectedInput){
     console.log(value);
     //Raða json eftir rating
     data = data.sort((a, b) => {
-      if (b.price > a.price) {
+      if (parseInt(b.price) > parseInt(a.price) ) {
         return -1;
       }
     })
