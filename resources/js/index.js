@@ -436,11 +436,22 @@ function sortByField(selectedInput){
     var result = filterData(data, query);
     appendData(result);
     typeColor();
-  } else if (value == 'VERÐI') {
+  } else if (value == 'VERÐI (DÝRAST EFST)') {
     console.log(value);
     //Raða json eftir rating
     data = data.sort((a, b) => {
       if (a.price > b.price) {
+        return -1;
+      }
+    })
+    var result = filterData(data, query);
+    appendData(result);
+    typeColor();
+  } else if (value == 'VERÐI (ÓDÝRAST EFST)') {
+    console.log(value);
+    //Raða json eftir rating
+    data = data.sort((a, b) => {
+      if (b.price > a.price) {
         return -1;
       }
     })
