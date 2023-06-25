@@ -55,7 +55,7 @@ function searchFunction() {
     card = cards[i].getElementsByTagName("h3")[0];
     if(card) {
       txtValue = card.innerHTML;
-      if (txtValue.indexOf(filter) > -1) {
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
         cards[i].style.display = ""
       } else {
         cards[i].style.display = "none"
