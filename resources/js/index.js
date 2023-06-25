@@ -153,6 +153,22 @@ function filterFood(selectedInput) {
     value = 'E'
   } else if (value == 'Grillmatur') {
     value = 'J'
+  } else if (value == 'Austurlenskt') {
+    value = 'K'
+  } else if (value == 'Fiskur') {
+    value = 'C'
+  } else if (value == 'Grænmetisréttir') {
+    value = 'I'
+  } else if (value == 'Lambakjöt') {
+    value = 'F'
+  } else if (value == 'Pasta') {
+    value = 'M'
+  } else if (value == 'Sushi') {
+    value = '4'
+  } else if (value == 'Villibráð') {
+    value = 'H'
+  } else if (value == 'Án matar') {
+    value = 'W'
   } else {
     value = ''
   }
