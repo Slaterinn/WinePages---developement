@@ -436,6 +436,17 @@ function sortByField(selectedInput){
     var result = filterData(data, query);
     appendData(result);
     typeColor();
+  } else if (value == 'VERÐI') {
+    console.log(value);
+    //Raða json eftir rating
+    data = data.sort((a, b) => {
+      if (a.price > b.price) {
+        return -1;
+      }
+    })
+    var result = filterData(data, query);
+    appendData(result);
+    typeColor();
   } else {
     console.log(value);
     //Raða json eftir rating
