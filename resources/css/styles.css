@@ -152,3 +152,8 @@ h3{
     display:none;
 }
 
+@media screen and (max-width: 750px) {
+    iframe {
+        height: 100% !important;
+    }
+}
