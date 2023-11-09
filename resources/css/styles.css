@@ -11,6 +11,18 @@ body {
   font-family: 'Teko', sans-serif;
 }
 
+#site-title {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+#site-subtitle {
+  font-family: 'Teko', sans-serif;
+  font-weight: 400;
+  letter-spacing: .1em;
+}
+
 h3{
   margin-top: 0em !important;
 }
@@ -30,16 +42,21 @@ h3{
 
 #main-navbar-title {
   color: #F1EFDD;
+  letter-spacing: .1em;
 }
 .navbar-title {
   font-family: 'Teko', sans-serif;
   font-weight: 600;
   font-size: 1.5em;
-  
 }
 
 .card{
   margin-top: 2em;
+  background-color: #F1EFDD !important;
+}
+
+#listings {
+  font-family: 'Teko', sans-serif;
 }
 
 /*.wine-type{
