@@ -143,6 +143,7 @@ h3{
   background-color: #FFE7D4;
 }
 
+/*filter selects:*/
 .select select {
   background-color: #FFE7D4 !important;
 }
