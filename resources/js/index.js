@@ -281,7 +281,10 @@ function appendData(data) {
         break;
       case "Sparkling Wine":
         wine_type_sel = "Freyðivín";
-
+        break;
+      default:
+        wine_type_sel = "N/A";
+        break;
     }
 
     var wine_type = document.createElement("h5");
