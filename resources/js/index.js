@@ -268,9 +268,27 @@ function appendData(data) {
     content.className = "content";
     card_content.appendChild(content);
 
+    wine_type_var = data[i].category
+    switch(wine_type_var) {
+      case "Red Wine":
+        wine_type_sel = "Rauðvín";
+        break;
+      case "White Wine":
+        wine_type_sel = "Hvítvín";
+        break;
+      case "Rose":
+        wine_type_sel = "Rósavín";
+        break;
+      case "Sparkling Wine":
+        wine_type_sel = "Freyðivín";
+      default:
+        wine_type_sel = "N/A";
+        break;
+    }
+
     var wine_type = document.createElement("h5");
     wine_type.className = "wine-type";
-    wine_type.innerHTML= data[i].category;
+    wine_type.innerHTML = wine_type_sel;
     content.appendChild(wine_type);
 
     var wine_name = document.createElement("h3");
@@ -483,11 +501,11 @@ function typeColor() {
   
   for (i=0; i<cards.length; i++) {
     var card = cards[i].getElementsByClassName("wine-type");
-    if(card && card[0].innerHTML === 'Red Wine') {
+    if(card && card[0].innerHTML === 'Rauðvín') {
       card[0].style.color = "#A82548";
-    } else if (card && card[0].innerHTML === 'Rose'){
+    } else if (card && card[0].innerHTML === 'Rósavín'){
       card[0].style.color = "#F98E72";
-    } else if (card && card[0].innerHTML === 'Sparkling Wine'){
+    } else if (card && card[0].innerHTML === 'Freyðivín'){
       card[0].style.color = "#FEC67A";
     } else {
       card[0].style.color = "#A9AE03";
