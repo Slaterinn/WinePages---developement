@@ -66,6 +66,11 @@ h3{
   color: #F98E72 !important; Rósavín
 }*/
 
+
+
+
+
+
 .is-img-center {
     margin: 0 auto;
 }
@@ -135,8 +140,12 @@ h3{
   padding: 12px 20px 12px 40px; /* Add some padding */
   border: 1px solid #ddd; /* Add a grey border */
   margin-bottom: 12px; /* Add some space below the input */
+  background-color: #FFE7D4;
 }
 
+.select select {
+  background-color: #FFE7D4 !important;
+}
 
 
 /*Menu hamburger*/
