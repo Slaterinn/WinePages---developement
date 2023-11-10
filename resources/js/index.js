@@ -488,9 +488,9 @@ function typeColor() {
     } else if (card && card[0].innerHTML === 'Rose'){
       card[0].style.color = "#F98E72";
     } else if (card && card[0].innerHTML === 'Sparkling Wine'){
-      card[0].style.color = "#F6CE97";
+      card[0].style.color = "#FEC67A";
     } else {
-      card[0].style.color = "#dbdd46";
+      card[0].style.color = "#A9AE03";
     }
   }
 }
