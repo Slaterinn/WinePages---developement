@@ -297,7 +297,7 @@ function appendData(data) {
     content.appendChild(wine_name);
 
     var wine_rec = document.createElement("h4");
-    wine_rec.className = "is-size-5 mb-5";
+    wine_rec.className = "is-size-3 mb-5";
     wine_rec.innerHTML = 'Meðmæli: ' + parseInt(data[i].recommendation*100) + '%';
     content.appendChild(wine_rec);
 
@@ -310,7 +310,7 @@ function appendData(data) {
     columns.appendChild(column_left);
 
     var producer_value = document.createElement("p");
-    producer_value.className = "title is-size-6 mt-2 has-text-grey-dark";
+    producer_value.className = "title is-size-5 mt-2 has-text-grey-dark";
     if (data[i].producer_vivino = 'N/F') {
       producer_value.innerHTML = data[i].producer
     } else {
