@@ -50,6 +50,16 @@ h3{
   font-size: 1.5em;
 }
 
+#navbar-item {
+  color: #FDA47E;
+
+}
+.navbar-item{
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
 .card{
   margin-top: 2em;
   background-color: #FFE7D4 !important;
