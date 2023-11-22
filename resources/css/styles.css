@@ -59,6 +59,11 @@ h3{
   font-family: 'Teko', sans-serif;
 }
 
+.label{
+color: #FDA47E !important;  
+}
+
+
 /*.wine-type{
   color: #A82548 !important Rauðvín
   color: #dbdd46 !important; Hvítvín -> #A9AE03
