@@ -67,6 +67,10 @@ h3{
 color: #FDA47E !important;  
 }
 
+.navbar-burger span {
+  color: #FDA47E !important; 
+}
+
 
 /*.wine-type{
   color: #A82548 !important Rauðvín
