@@ -71,6 +71,16 @@ color: #FDA47E !important;
   color: #FDA47E !important; 
 }
 
+@media screen and (max-width: 1023px) {
+  #navbar-selection {
+    background-color: #FFE7D4 ;
+
+  }
+
+  #navbar-selection .navbar-item {
+    color: black !important;
+  }
+}
 
 /*.wine-type{
   color: #A82548 !important Rauðvín
