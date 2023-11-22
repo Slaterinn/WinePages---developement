@@ -396,6 +396,13 @@ function appendData(data) {
     grapes.className = "subtitle is-size-6 pt-1 has-text-grey is-uppercase";
     grapes.innerHTML = "Þrúgur";
 
+    var grapes_value = document.createElement("p");
+    grapes_value.className = "title is-size-5 mt-2 has-text-grey-dark";
+    grapes_value.innerHTML = data[i].seller;
+    var grapes = document.createElement("p");
+    grapes.className = "subtitle is-size-6 pt-1 has-text-grey is-uppercase";
+    grapes.innerHTML = "Söluaðili";
+
 
 
     if (price_value.innerHTML !== ""){
