@@ -430,7 +430,7 @@ function appendData(data) {
 
     var footer_link_vin = document.createElement("a");
     footer_link_vin.href = data[i].link;
-    footer_link_vin.innerHTML = 'Vínbúðin';
+    footer_link_vin.innerHTML = 'Skoða vín';
     footer_link_vin.setAttribute('target', '_blank');
     footer_content_vin.appendChild(footer_link_vin);
 
